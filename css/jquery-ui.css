@@ -1042,9 +1042,9 @@ a.ui-button:focus {
 .ui-widget-header .ui-priority-primary {
 	font-weight: bold;
 }
-.ui-priority-secondary,
-.ui-widget-content .ui-priority-secondary,
-.ui-widget-header .ui-priority-secondary {
+.ui-priority-High,
+.ui-widget-content .ui-priority-High,
+.ui-widget-header .ui-priority-High {
 	opacity: .7;
 	filter:Alpha(Opacity=70); /* support: IE8 */
 	font-weight: normal;
