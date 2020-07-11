@@ -430,13 +430,13 @@
 	function customTabProductPageTab () {
 	    if ($('.product-details-tab-title').length) {
 	        var tabWrap = $('.product-details-tab-content');
-	        var tabClicker = $('.product-details-tab-title ul li');
+	        var tMPSDlicker = $('.product-details-tab-title ul li');
 	        
 	        tabWrap.children('div').hide();
 	        tabWrap.children('div').eq(0).show();
-	        tabClicker.on('click', function() {
+	        tMPSDlicker.on('click', function() {
 	            var tabName = $(this).data('tab-name');
-	            tabClicker.removeClass('active');
+	            tMPSDlicker.removeClass('active');
 	            $(this).addClass('active');
 	            var id = '#'+ tabName;
 	            tabWrap.children('div').not(id).hide();

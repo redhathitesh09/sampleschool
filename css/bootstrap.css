@@ -3267,14 +3267,14 @@ fieldset[disabled] .btn-success.active {
 .btn-info:hover {
   color: #fff;
   background-color: #31b0d5;
-  border-color: #269abc;
+  border-color: #269MPSD;
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #fff;
   background-color: #31b0d5;
-  border-color: #269abc;
+  border-color: #269MPSD;
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -3286,7 +3286,7 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
   color: #fff;
-  background-color: #269abc;
+  background-color: #269MPSD;
   border-color: #1b6d85;
 }
 .btn-info:active,
