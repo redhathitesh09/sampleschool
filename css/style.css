@@ -1016,7 +1016,7 @@ h6 a:hover{
 
 .about-section{
   position: relative;
-  padding: 114px 0px 81px 0px;
+  padding: 40px 0px 81px 0px;
 }
 .about-section .section-title h2:before{
   background: url(../images/home/title-shap.png);
@@ -1043,7 +1043,7 @@ h6 a:hover{
   position: relative;
   overflow: hidden;
   margin-left: 8px;
-  margin-top: -56px;
+  margin-top: 0px;
 }
 .video-gallery img {
   transform: scale(1);
