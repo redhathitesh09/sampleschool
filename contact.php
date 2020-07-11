@@ -74,7 +74,7 @@ $headers = 'From: '.$email."\r\n".
 'Reply-To: '.$email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
-header('location:contact.php');
+header('location:contact.html');
 ?>
 
 
@@ -208,7 +208,7 @@ Thank you for contacting us. We will be in touch with you very soon.
                                                 <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contact</a>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -282,7 +282,7 @@ Thank you for contacting us. We will be in touch with you very soon.
                                                 <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contact</a>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -325,7 +325,7 @@ Thank you for contacting us. We will be in touch with you very soon.
               <div id="messages_content"></div>
             </div>-->
                         <div class="contact-title">Get in Touch</div>
-    <form id="form" name="contact_form" class="default-form"  method="post" action="contact.php">
+    <form id="form" name="contact_form" class="default-form"  method="post" action="contact.html">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
         <input type="text" name="name" value="" placeholder="Name" required="">
