@@ -7071,7 +7071,7 @@ if ( $.uiBackCompat !== false ) {
 			text: true,
 			icons: {
 				primary: null,
-				secondary: null
+				High: null
 			}
 		},
 
@@ -7083,11 +7083,11 @@ if ( $.uiBackCompat !== false ) {
 				this.options.text = this.options.showLabel;
 			}
 			if ( !this.options.icon && ( this.options.icons.primary ||
-					this.options.icons.secondary ) ) {
+					this.options.icons.High ) ) {
 				if ( this.options.icons.primary ) {
 					this.options.icon = this.options.icons.primary;
 				} else {
-					this.options.icon = this.options.icons.secondary;
+					this.options.icon = this.options.icons.High;
 					this.options.iconPosition = "end";
 				}
 			} else if ( this.options.icon ) {
@@ -7111,8 +7111,8 @@ if ( $.uiBackCompat !== false ) {
 				if ( value.primary ) {
 					this._super( "icon", value.primary );
 					this._super( "iconPosition", "beginning" );
-				} else if ( value.secondary ) {
-					this._super( "icon", value.secondary );
+				} else if ( value.High ) {
+					this._super( "icon", value.High );
 					this._super( "iconPosition", "end" );
 				}
 			}
@@ -8881,7 +8881,7 @@ $.extend( Datepicker.prototype, {
 			this._get( inst, "closeText" ) + "</button>" : "" );
 
 		buttonPanel = ( showButtonPanel ) ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + ( isRTL ? controls : "" ) +
-			( this._isInRange( inst, gotoDate ) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'" +
+			( this._isInRange( inst, gotoDate ) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-High ui-corner-all' data-handler='today' data-event='click'" +
 			">" + currentText + "</button>" : "" ) + ( isRTL ? "" : controls ) + "</div>" : "";
 
 		firstDay = parseInt( this._get( inst, "firstDay" ), 10 );
@@ -8970,7 +8970,7 @@ $.extend( Datepicker.prototype, {
 							( unselectable ? "<span class='ui-state-default'>" + printDate.getDate() + "</span>" : "<a class='ui-state-default" +
 							( printDate.getTime() === today.getTime() ? " ui-state-highlight" : "" ) +
 							( printDate.getTime() === currentDate.getTime() ? " ui-state-active" : "" ) + // highlight selected day
-							( otherMonth ? " ui-priority-secondary" : "" ) + // distinguish dates from other months
+							( otherMonth ? " ui-priority-High" : "" ) + // distinguish dates from other months
 							"' href='#'>" + printDate.getDate() + "</a>" ) ) + "</td>"; // display selectable date
 						printDate.setDate( printDate.getDate() + 1 );
 						printDate = this._daylightSavingAdjust( printDate );
@@ -8995,7 +8995,7 @@ $.extend( Datepicker.prototype, {
 
 	/* Generate the month and year header. */
 	_generateMonthYearHeader: function( inst, drawMonth, drawYear, minDate, maxDate,
-			secondary, monthNames, monthNamesShort ) {
+			High, monthNames, monthNamesShort ) {
 
 		var inMinYear, inMaxYear, month, years, thisYear, determineYear, year, endYear,
 			changeMonth = this._get( inst, "changeMonth" ),
@@ -9005,7 +9005,7 @@ $.extend( Datepicker.prototype, {
 			monthHtml = "";
 
 		// Month selection
-		if ( secondary || !changeMonth ) {
+		if ( High || !changeMonth ) {
 			monthHtml += "<span class='ui-datepicker-month'>" + monthNames[ drawMonth ] + "</span>";
 		} else {
 			inMinYear = ( minDate && minDate.getFullYear() === drawYear );
@@ -9022,13 +9022,13 @@ $.extend( Datepicker.prototype, {
 		}
 
 		if ( !showMonthAfterYear ) {
-			html += monthHtml + ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" );
+			html += monthHtml + ( High || !( changeMonth && changeYear ) ? "&#xa0;" : "" );
 		}
 
 		// Year selection
 		if ( !inst.yearshtml ) {
 			inst.yearshtml = "";
-			if ( secondary || !changeYear ) {
+			if ( High || !changeYear ) {
 				html += "<span class='ui-datepicker-year'>" + drawYear + "</span>";
 			} else {
 
@@ -9060,7 +9060,7 @@ $.extend( Datepicker.prototype, {
 
 		html += this._get( inst, "yearSuffix" );
 		if ( showMonthAfterYear ) {
-			html += ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" ) + monthHtml;
+			html += ( High || !( changeMonth && changeYear ) ? "&#xa0;" : "" ) + monthHtml;
 		}
 		html += "</div>"; // Close datepicker_header
 		return html;
